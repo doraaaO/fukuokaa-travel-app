@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   // 注意：此處必須填入您的 GitHub 儲存庫名稱，前後保留斜線
-  base: '/fukuoka-travel-app/',
+  base: '/fukuokaa-travel-app/',
   plugins: [
     react(),
     VitePWA({
