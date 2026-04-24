@@ -14,7 +14,7 @@ export default function Day2() {
         <h3>🚗 [交通] 取車：Times租車博多車站 博多口店</h3>
         <p><strong>時間：</strong>08:00</p>
         <p><strong>預約代號：</strong><code>202600359229</code></p>
-        <p><strong>車型：</strong><code>W-4 (已配置兩張兒童安全座椅，無行李負載)</code></p>
+        <p><strong>車型：</strong><code>W-4 (兩張兒童安全座椅、ETC、多語言導航)</code></p>
         <p style={{ fontSize: '0.85rem', color: '#888' }}>必帶：台灣汽車駕照、日文譯本</p>
         <a href="https://maps.app.goo.gl/w7Zev1ygLaUSWja57" className="nav-link" target="_blank" rel="noreferrer">🧭 啟動導航</a>
       </div>

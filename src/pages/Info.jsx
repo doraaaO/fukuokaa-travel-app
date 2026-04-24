@@ -28,7 +28,7 @@ export default function Info() {
         <p><strong>公司：</strong>Times租車博多車站 博多口店</p>
         <p><strong>訂單：</strong><code>202600359229</code></p>
         <p><strong>期間：</strong>05/01　08:00 - 05/03　08:00</p>
-        <p><strong>車型：</strong>W-4　兩張安全座椅</p>
+        <p><strong>車型：</strong>W-4　兩張兒童安全座椅、ETC、多語言導航</p>
       </div>
     </div>
   );
