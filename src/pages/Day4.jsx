@@ -1,10 +1,12 @@
 import React from 'react';
+import WeatherWidget from '../components/WeatherWidget'; // 1. 引入元件
 
 export default function Day4() {
   return (
     <div className="page-wrapper">
       <h2 className="page-title">📍 Day 4：歷史、運河與天神採購</h2>
-      <p className="weather-tag">🌤️ 5/3 週日 (黃金週) | 24°C / 17°C 晴時多雲</p>
+      {/* 2. 替換為動態天氣元件，Day 4 可設定顯示今日天氣 */}
+      <WeatherWidget targetDay="today" />
 
       <div className="card">
         <h3>🚗 [交通] 還車：時代租車</h3>
