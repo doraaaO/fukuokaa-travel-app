@@ -12,8 +12,8 @@ export default function Day5() {
 
       <div className="card" style={{ borderColor: '#fff3e0' }}>
         <h3>🚌 [交通] 前往福岡機場</h3>
-        <p>搭乘市區地鐵或巴士前往機場。</p>
-        <a href="#" className="nav-link" target="_blank" rel="noreferrer">📍 啟動導航</a>
+        <p>搭乘市區地鐵、巴士、計程車前往機場。</p>
+        <a href="https://maps.app.goo.gl/E7BEHJ2o8xF38zJ56" className="nav-link" target="_blank" rel="noreferrer">🧭 啟動導航</a>
       </div>
 
       <div className="card" style={{ borderColor: '#fff3e0' }}>
