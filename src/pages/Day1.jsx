@@ -10,8 +10,8 @@ export default function Day1() {
 
       <div className="card">
         <h3>✈️ 航班抵達</h3>
-        <p style={{ fontSize: '0.8rem', color: '#888' }}>泰毅、芮芮、Dora、Ollie: <code>FQTFW8</code></p>
-        <p style={{ fontSize: '0.8rem', color: '#888' }}>媽媽: <code>DSCO5S</code> | 爸爸: <code>DSMCOH</code></p>
+        <p style={{ fontSize: '0.8rem', color: '#888' }}>泰毅、芮芮、Dora、Ollie: <strong><code>FQTFW8</code></strong></p>
+        <p style={{ fontSize: '0.8rem', color: '#888' }}>媽媽: <strong><code>DSCO5S</code></strong> | 爸爸: <strong><code>DSMCOH</code></strong></p>
       </div>
 
       <div className="card" style={{ borderColor: '#E1F5FE' }}>
