@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 // 匯入各分頁元件
 import Day1 from './pages/Day1'
@@ -12,15 +12,14 @@ import Budget from './pages/Budget'
 function App() {
   return (
     <div className="app-container">
-      {/* 導航列必須在裡面，且 className 是 bottom-nav */}
       <nav className="bottom-nav">
-        <Link to="/">Day 1</Link>
-        <Link to="/day2">Day 2</Link>
-        <Link to="/day3">Day 3</Link>
-        <Link to="/day4">Day 4</Link>
-        <Link to="/day5">Day 5</Link>
-        <Link to="/info">資訊</Link>
-        <Link to="/budget">預算</Link>
+        <NavLink to="/" end>🗓️ <span>Day 1</span></NavLink>
+        <NavLink to="/day2">🚗 <span>Day 2</span></NavLink>
+        <NavLink to="/day3">⛩️ <span>Day 3</span></NavLink>
+        <NavLink to="/day4">🛍️ <span>Day 4</span></NavLink>
+        <NavLink to="/day5">✈️ <span>Day 5</span></NavLink>
+        <NavLink to="/info">ℹ️ <span>資訊</span></NavLink>
+        <NavLink to="/budget">💰 <span>預算</span></NavLink>
       </nav>
 
       {/* 內容區塊 */}

@@ -1,139 +1,158 @@
-/* 日式極簡風格 Base */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #f7f7f8;
-  /* 柔和的淺灰底色 */
-  color: #333;
-  -webkit-tap-highlight-color: transparent;
+/* 日系手帳風格：溫暖色調與和紙質感 */
+:root {
+  --bg-color: #fdfaf6;
+  /* 柔和奶油色底 */
+  --card-bg: #ffffff;
+  /* 純白卡片 */
+  --primary-pink: #ffebf0;
+  /* 櫻花粉 (膠帶與裝飾) */
+  --primary-blue: #e3f2fd;
+  /* 天空藍 (導航) */
+  --accent-green: #e8f5e9;
+  /* 抹茶綠 (天氣標籤) */
+  --text-main: #5d5d5d;
+  /* 溫潤的深灰色 */
+  --text-light: #8e8e8e;
 }
 
-/* App 容器，限制寬度讓在電腦上看也像手機 */
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
 .app-container {
   max-width: 480px;
   margin: 0 auto;
-  background-color: #f7f7f8;
   min-height: 100vh;
-  padding-bottom: 70px;
-  /* 給底部導覽列留空間 */
+  position: relative;
+  padding-bottom: 90px;
 }
 
-/* 內容區塊 */
-.page-wrapper {
-  padding: 20px;
-}
-
+/* 頁面標題：像手寫標題一樣帶有底色 */
 .page-title {
-  font-size: 1.3rem;
-  color: #2c3e50;
-  margin-bottom: 5px;
+  padding: 30px 20px 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  position: relative;
 }
 
-.weather-tag {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0;
-  margin-bottom: 20px;
+.page-title::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  width: 80px;
+  height: 8px;
+  background-color: var(--primary-pink);
+  z-index: -1;
+  border-radius: 4px;
 }
 
-/* 卡片 UI */
+/* 卡片 UI：加入和紙膠帶與大幅度圓角 */
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #eaeaea;
+  background: var(--card-bg);
+  margin: 15px 15px 25px;
+  padding: 24px 20px 20px;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border: 1.5px solid #f0ece2;
+}
+
+/* 和紙膠帶效果 (裝飾在卡片上方) */
+.card::before {
+  content: "TRIP MEMO";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  background: var(--primary-pink);
+  padding: 4px 15px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff8fa3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.03);
+  border-left: 2px dashed #fff;
+  border-right: 2px dashed #fff;
 }
 
 .card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #1a1a1a;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 8px;
+  margin: 0 0 12px 0;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.card p,
-.card ul {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4a4a4a;
+/* 天氣標籤：抹茶綠圓角 */
+.weather-container {
+  margin: 0 20px 10px;
 }
 
-/* 導航按鈕 */
-.nav-link {
+.weather-tag {
+  background-color: var(--accent-green);
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #e3f2fd;
-  color: #1976d2;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #2e7d32;
   font-weight: 500;
 }
 
-/* 底部導覽列 (固定在底部) */
+/* 底部導覽：票券式設計 */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  max-width: 480px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 50px;
   display: flex;
   justify-content: space-around;
-  padding: 12px 0;
-  border-top: 1px solid #eaeaea;
+  padding: 12px 5px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
 .bottom-nav a {
   text-decoration: none;
-  color: #888;
-  font-size: 0.85rem;
-  font-weight: 500;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s;
 }
 
-.bottom-nav a:hover,
-.bottom-nav a:focus {
+.bottom-nav a.active {
+  color: #ff8fa3;
+  transform: translateY(-2px);
+}
+
+/* 指南針風格按鈕 */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--primary-blue);
   color: #1976d2;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* 天氣元件容器 */
-.weather-container {
-  margin-bottom: 20px;
-}
-
-/* 離線提示標籤 */
-.offline-badge {
-  display: inline-block;
-  font-size: 0.8rem;
-  color: #d32f2f;
-  background-color: #ffebee;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-
-/* 載入中骨架屏動畫 */
-.skeleton {
-  color: #ccc;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.6;
-  }
+.nav-link:hover {
+  background-color: #bbdefb;
 }
