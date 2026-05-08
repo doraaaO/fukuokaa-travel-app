@@ -17,7 +17,9 @@ export default function Day1() {
 
       <div className="card" style={{ borderColor: '#E1F5FE' }}>
         <h3>🏨 Parkside Inn Hakata</h3>
+        <p><strong>地址：</strong>〒812-0011 福岡県福岡市博多区博多駅前4丁目11−13。</p>
         <p><strong>備註：</strong>15:00 可以辦理入住，寄放行李。</p>
+        <p><strong>交通：</strong>從福岡機場國際線，搭Uber或Go至博多車站。用Uber、GO叫車，在12號月台上車。往博多車站約1500円。</p>
         <a href="https://maps.app.goo.gl/DwH3t6PX9WuCHeJc8" className="nav-link" target="_blank" rel="noreferrer">🧭 啟動導航</a>
       </div>
 
